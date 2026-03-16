@@ -74,9 +74,11 @@ def Activity():
         Person("McQueen", 80),
         Person("Bascreveil", 50)
     ]
+    
+    max_age = int(input("Enter the maximum age: "))
     age_filter = Q3(persons)
-    # print_filtered is the input of the max age to filter the persons
-    age_filter.print_filtered(39)
+    age_filter.print_filtered(max_age)
+
 
 # Run the Activity function
 if __name__ == "__main__":
