@@ -1,4 +1,4 @@
-class AverageCalculator:
+class Q1:
     def __init__(self, numbers):
         self.numbers = numbers
 
@@ -13,7 +13,7 @@ class AverageCalculator:
         print(f"The average of {nums_str} is: {int(avg)}")
 
 
-class SameNumbersFinder:
+class Q2:
     def __init__(self, list_one, list_two):
         self.list_one = list_one
         self.list_two = list_two
@@ -29,12 +29,7 @@ class SameNumbersFinder:
         print(f"\nAll same numbers on both List: {same_str}")
 
 
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-class PersonAgeFilter:
+class Q3:
     def __init__(self, persons):
         self.persons = persons
 
@@ -47,17 +42,21 @@ class PersonAgeFilter:
         for p in filtered:
             print(f"Name: {p.name} Age: {p.age}")
 
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
 def Activity():
     # 1. Average Calculator
-    avg_calc = AverageCalculator([10, 15, 20, 30])
+    avg_calc = Q1([10, 15, 20, 30])
     avg_calc.print_average()
     print()
 
     # 2. Same Numbers Finder
     list_one = [1, 20, 3, 6, 8, 9, 10, 7, 12, 21, 18]
     list_two = [10, 2, 30, 15, 8, 21, 13, 18, 28, 25, 16]
-    same_finder = SameNumbersFinder(list_one, list_two)
+    same_finder = Q2(list_one, list_two)
     same_finder.print_same_numbers()
     print()
 
@@ -75,7 +74,7 @@ def Activity():
         Person("McQueen", 80),
         Person("Bascreveil", 50)
     ]
-    age_filter = PersonAgeFilter(persons)
+    age_filter = Q3(persons)
     # print_filtered is the input of the max age to filter the persons
     age_filter.print_filtered(39)
 
